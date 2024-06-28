@@ -4,12 +4,19 @@
     background-color: white;
 }
 
-.homepage{
+.homepage {
     height: 100vh;
     margin-left: 7%;
 }
+
 nav {
+    background-color: white;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #f0c01d;
+    top: 0;
+
 }
 
 .on {
@@ -28,6 +35,7 @@ nav ul {
     margin: 0%;
     margin-top: -3%;
     font-family: "Eczar", serif;
+    margin-left: 70%;
 }
 
 .navitems li a {
@@ -37,17 +45,13 @@ nav ul {
     transition: all ease 0.2s;
 }
 
-.navitems li a:hover{
+.navitems li a:hover {
     font-size: 1.3rem;
-    color:  #E194C0;;
+    color: #E194C0;
+    ;
 
 }
 
-hr {
-    background-color: #f0c01d;
-    height: 0.5px;
-    border: none;
-}
 
 h1 {
     font-size: 80px;
@@ -94,26 +98,108 @@ h1 span {
     margin-left: 100px;
 }
 
-.aboutme{
-    width:400px;
+.aboutme {
+    width: 400px;
 }
 
-.abtext{
+.abtext {
     font-family: "Eczar", serif;
     margin-left: 7%;
 }
-.abtext h1{
-    color:#f0c01d;
-    font-size: 75px;
+
+.abtext h1 {
+    color: #f0c01d;
+    font-size: 55px;
 }
 
-.abtext h1 span{
-    color:  #E194C0;
-    font-size: 75px;
+.abtext h1 span {
+    color: #E194C0;
+    font-size: 55px;
 }
 
-.abtmain{
+.abtmain {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
     margin-top: 10%;
+}
+
+.contact {
+    display: flex;
+    font-family: "Eczar", serif;
+    margin-left: 7%;
+}
+
+.contact h1 {
+    font-size: 50px;
+    line-height: normal;
+}
+
+.leftside {
+    font-family: "Eczar", serif;
+    margin-left: 7%;
+}
+
+.leftside h1 {
+    color: #E194C0;
+    font-size: 50px;
+}
+
+.leftside h1 span {
+    color: #f0c01d;
+    font-size: 50px;
+}
+
+.contactimg {
+    width: 300px;
+}
+
+.contactcontent {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 90px;
+}
+
+.nameemail {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+
+}
+
+.email {
+    margin-left: 5%;
+}
+
+input {
+    width: 200px;
+    height: 40px;
+    border-radius: 16px;
+    border: none;
+    background-color: #E194C0;
+    padding-left: 12px;
+    opacity: 0.5;
+    margin-top: 12px;
+}
+
+textarea {
+    width: 500px;
+    height: 70px;
+    border-radius: 16px;
+    border: none;
+    background-color: #E194C0;
+    padding-left: 12px;
+    opacity: 0.5;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+.button {
+    background-color: #f0c01d;
+    color: black;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    opacity: 1;
+
 }
