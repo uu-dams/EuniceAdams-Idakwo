@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css"
     />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
   </head>
 
   <body>
@@ -86,12 +87,36 @@
     </section>
 
     <section class=contact id="contact">
-        <div class="leftside">
-            <h1> Got a Project <span> in mind? </span> </h1>
+      <div>
+      <h1> Got a Project <span><br> in mind? </span> </h1>
+      <img src="images/personal-data-concept-illustration.png" class="contactimg">
+      </div>
+      <div class="contactcontent">
+        <div class="rightside">
+          <form>
+          <div class="nameemail">
+            <div class="name">
+            <label for="name"> Your Name</label><br>
+            <input type="text" required class="inpt" placeholder="Name"/><br>
+            </div>
 
+            <div class="email">
+            <label for="email"> Your Email </label><br>
+            <input type="text" required class="inpt" placeholder="Email"/><br>
+            </div>
+          </div>
+
+            <div>
+            <label for="message"> Your Message </label><br>
+            <textarea name="message" class="inpt" placeholder="message"></textarea><br><br>
+            </div>
+
+            <button class="button"> Send Message <i class="fi fi-rs-paper-plane" style="background-color: #f0c01d;"></i> </button>
+
+          </form>
         </div>
 
-
+        </div>
     </section>
   </body>
 </html>
