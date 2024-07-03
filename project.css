@@ -3,17 +3,8 @@
     padding: 0%;
     background-color: white;
 }
-/* for mobile phones: */
-@media only screen and (max-width:450px){
-    body{
-        background-color: lightblue;
-    }
-}
-/*for desktop: */
-@media only screen and (max-width:1440px){
-    body{
-        background-color:rgb(255, 228, 196);
-    }
+
+@media only screen and (max-width:600px){
 }
 
 .homepage {
