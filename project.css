@@ -4,9 +4,6 @@
     background-color: white;
 }
 
-@media only screen and (max-width:600px){
-    
-}
 
 .homepage {
     height: 100vh;
@@ -55,6 +52,9 @@ nav ul {
 
 }
 
+ul i{
+    display: none;
+}
 
 h1 {
     font-size: 80px;
@@ -257,3 +257,21 @@ textarea {
     text-align: end;
     font-size: small;
 }
+
+@media only screen and (max-width:400px){
+    nav ul{
+        display: none;
+        /*margin-left:120px*/
+    }
+    nav ul img{
+        display: block;
+    }
+    .contactcontent{
+        display: block;
+    }
+    #about{
+        display: block;
+    }
+}
+    
+    
