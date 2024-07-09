@@ -4,18 +4,15 @@
     background-color: white;
 }
 
-
-.homepage {
+.homepage{
     height: 100vh;
     margin-left: 7%;
 }
-
 nav {
-    background-color: white;
     padding: 1rem;
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid #f0bf1df9;
+    border-bottom: 1px solid #f0c01d;
     top: 0;
 
 }
@@ -36,7 +33,6 @@ nav ul {
     margin: 0%;
     margin-top: -3%;
     font-family: "Eczar", serif;
-    margin-left: 70%;
 }
 
 .navitems li a {
@@ -46,15 +42,14 @@ nav ul {
     transition: all ease 0.2s;
 }
 
-.navitems li a:hover {
+.navitems li a:hover{
     font-size: 1.3rem;
-    color: hsla(326, 56%, 73%, 0.977);
+    color: #E194C0;
 
 }
 
-nav ul img{
+ul i{
     display: none;
-    width:40px;
 }
 
 h1 {
@@ -103,37 +98,10 @@ h1 span {
 }
 
 .aboutme {
-    width: 300px;
+    width: 400px;
 }
 
-.abtext {
-    font-family: "Eczar", serif;
-    margin-left: 7%;
-    margin-top: 50px;
-}
-
-.abtext h1 {
-    color: #f0c01d;
-    font-size: 55px;
-}
-
-.abtext h1 span {
-    color: #E194C0;
-    font-size: 55px;
-}
-
-.abtext article {
-    font-size: 15px;
-}
-
-.abtmain {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.contact {
-    display: flex;
+.abtext{
     font-family: "Eczar", serif;
     margin-left: 7%;
 }
@@ -141,7 +109,7 @@ h1 span {
 .contact h1 {
     font-size: 50px;
     line-height: 1.2;
-    margin-top: 50%;
+    margin-top: 20%;
 }
 
 .leftside {
@@ -154,20 +122,16 @@ h1 span {
     font-size: 50px;
 }
 
-.leftside h1 span {
-    color: #f0c01d;
-    font-size: 50px;
+.abtext h1 span{
+    color:  #E194C0;
+    font-size: 75px;
 }
 
-.contactimg {
-    width: 300px;
-}
-
-.contactcontent {
+.abtmain{
     display: flex;
     justify-content: space-around;
     margin-left: 90px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .nameemail {
@@ -262,6 +226,7 @@ textarea {
 @media only screen and (max-width:400px){
     nav ul{
         display: none;
+        /*margin-left:120px*/
     }
     nav ul img{
         display: block;
@@ -273,4 +238,5 @@ textarea {
         display: block;
     }
 }
+    
     
