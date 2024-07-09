@@ -48,8 +48,9 @@ nav ul {
 
 }
 
-ul i{
+ul img{
     display: none;
+    width: 40px;
 }
 
 h1 {
@@ -101,7 +102,34 @@ h1 span {
     width: 400px;
 }
 
-.abtext{
+.abtext {
+    font-family: "Eczar", serif;
+    margin-left: 7%;
+    margin-top: 50px;
+}
+
+.abtext h1 {
+    color: #f0c01d;
+    font-size: 55px;
+}
+
+.abtext h1 span {
+    color: #E194C0;
+    font-size: 55px;
+}
+
+.abtext article {
+    font-size: 15px;
+}
+
+.abtmain {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.contact {
+    display: flex;
     font-family: "Eczar", serif;
     margin-left: 7%;
 }
@@ -122,12 +150,16 @@ h1 span {
     font-size: 50px;
 }
 
-.abtext h1 span{
-    color:  #E194C0;
-    font-size: 75px;
+.leftside h1 span {
+    color: #f0c01d;
+    font-size: 50px;
 }
 
-.abtmain{
+.contactimg {
+    width: 300px;
+}
+
+.contactcontent {
     display: flex;
     justify-content: space-around;
     margin-left: 90px;
@@ -226,7 +258,6 @@ textarea {
 @media only screen and (max-width:400px){
     nav ul{
         display: none;
-        /*margin-left:120px*/
     }
     nav ul img{
         display: block;
