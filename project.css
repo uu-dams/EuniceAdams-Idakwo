@@ -32,6 +32,7 @@ nav ul {
     padding: 0%;
     margin: 0%;
     margin-top: -3%;
+    margin-left: 70%;
     font-family: "Eczar", serif;
 }
 
@@ -40,6 +41,7 @@ nav ul {
     text-decoration: none;
     margin-right: 85px;
     transition: all ease 0.2s;
+    font-size: 1rem;
 }
 
 .navitems li a:hover{
@@ -48,7 +50,7 @@ nav ul {
 
 }
 
-ul img{
+.navitems img{
     display: none;
     width: 40px;
 }
@@ -93,10 +95,14 @@ h1 span {
     font-family: "Eczar", serif;
 }
 
-.eng {
-    width: 350px;
-    margin-left: 100px;
+main {
+    display:flex;
+} 
+
+.btn img{
+    width:350px;
 }
+
 
 .aboutme {
     width: 400px;
@@ -120,6 +126,7 @@ h1 span {
 
 .abtext article {
     font-size: 15px;
+    display: block;
 }
 
 .abtmain {
@@ -256,23 +263,31 @@ textarea {
     font-size: small;
 }
 
-@media only screen and (max-width:400px){
-    nav li{
+@media only screen and (max-width: 480px){
+    nav li a{
         display: none;
     }
-    ul img{
-        display: block;
-        cursor: pointer;
+   
+    .navitems img{
+        display:block;
+        height: 49px;
+        margin-right:1700%;
+       
     }
     .contactcontent{
         display: block;
     }
-    #about{
-        display: block;
+    .abtext article{
+        display: inline;
     }
-    .eng {
-        margin-top: 50%;
-        
+    .btn{
+        display:block;
+        margin-top:100px;
     }
+    .btn img{
+        width:250px;
+        margin-top: 50px;
+    }
+    
     
 }
