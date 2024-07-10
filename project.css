@@ -257,11 +257,12 @@ textarea {
 }
 
 @media only screen and (max-width:400px){
-    nav ul{
+    nav li{
         display: none;
     }
-    nav ul img{
+    ul img{
         display: block;
+        cursor: pointer;
     }
     .contactcontent{
         display: block;
@@ -271,7 +272,6 @@ textarea {
     }
     .eng {
         margin-top: 50%;
-        height: 200px;
         
     }
     
