@@ -3,16 +3,18 @@
     padding: 0%;
     background-color: white;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .homepage{
     height: 100vh;
-    margin-left: 7%;
 }
 nav {
     padding: 1rem;
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid #f0c01d ;
     top: 0;
 
 }
@@ -71,6 +73,7 @@ h1 span {
     display: flex;
     margin-top: 100px;
     margin-right: 100px;
+    margin-left: 7%;
 }
 
 .button1 {
@@ -101,11 +104,12 @@ main {
 
 .btn img{
     width:350px;
+    margin-left: 50px;
 }
 
 
 .aboutme {
-    width: 300px;
+    width: 350px;
     margin-top: 50px;
 }
 
@@ -140,7 +144,7 @@ main {
 .contact {
     display: flex;
     font-family: "Eczar", serif;
-    margin-left: 7%;
+    margin-left: 5%;
     margin-top: 10%;
 }
 
@@ -148,26 +152,19 @@ main {
     font-size: 50px;
     line-height: 1.2;
     margin-top: 20%;
-}
-
-.leftside {
     font-family: "Eczar", serif;
     margin-left: 7%;
-}
-
-.leftside h1 {
     color: #E194C0;
-    font-size: 50px;
 }
 
-.leftside h1 span {
+.contact h1 span {
     color: #f0c01d;
-    font-size: 50px;
 }
 
 .contactimg {
     width: 300px;
 }
+
 
 .contactcontent {
     display: flex;
@@ -228,7 +225,7 @@ textarea {
     padding-top: 5%;
     margin-top: 4%;
     font-family: "Eczar", serif;
-    border-top: 1px solid purple;
+    border-top: 1px solid #f0c01d;
     width:100%;
 
 }
@@ -300,5 +297,11 @@ textarea {
     .contactimg {
         display:none;
     }
+    .rightside{
+       
+    }
     
+   
+    
+
 }
