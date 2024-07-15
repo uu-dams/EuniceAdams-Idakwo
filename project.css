@@ -220,6 +220,7 @@ textarea {
 
 }
 
+
 .footerend {
     display: flex;
     justify-content: center;
@@ -227,7 +228,7 @@ textarea {
     margin-top: 4%;
     font-family: "Eczar", serif;
     border-top: 1px solid #f0c01d;
-    width: 100%;
+    width: 150%; 
 
 }
 
@@ -272,8 +273,9 @@ textarea {
     .navitems img {
         display: block;
         height: 49px;
-        margin-right: 1300%;
-
+        margin-right: 500%;
+        margin-top:5px;
+        
     }
 
     .contactcontent {
