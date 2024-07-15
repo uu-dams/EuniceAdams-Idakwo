@@ -292,7 +292,7 @@ textarea {
     }
 
     .btn img {
-        width: 250px;
+        width: 350px;
         margin-top: 50px;
     }
 
@@ -316,6 +316,15 @@ textarea {
 
     .contact {
         display: grid;
+    }
+
+    .nameemail {
+        display: block;
+    
+    }
+
+    .email {
+        margin-left: 0%;
     }
 
     .footerend {
