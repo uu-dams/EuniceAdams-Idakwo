@@ -302,8 +302,9 @@ textarea {
     }
 
     .btn img {
-        width: 350px;
+        width: 250px;
         margin-top: 50px;
+        margin-left: 0px;
     }
 
     .aboutme {
@@ -356,6 +357,7 @@ textarea {
 
     .footerend {
         justify-content: flex-end;
+        width: 150%;
     }
 
     .socials {
