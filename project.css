@@ -46,6 +46,7 @@ nav ul {
     margin-right: 85px;
     transition: all ease 0.2s;
     font-size: 1rem;
+    
 }
 
 .navitems li a:hover {
@@ -106,7 +107,7 @@ main {
 
 .btn img {
     width: 350px;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 
@@ -228,7 +229,7 @@ textarea {
     margin-top: 4%;
     font-family: "Eczar", serif;
     border-top: 1px solid #f0c01d;
-    width: 150%;
+    width: 110%;
 
 }
 
@@ -257,8 +258,17 @@ textarea {
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: black;
+    text-decoration: none;
+    transition: all ease 0.2s;
+}
+
+ .socials a:hover {
+    font-size: 1.3rem;
+    text-decoration: none;
 
 }
+
 
 .copyright {
     text-align: end;
@@ -320,21 +330,40 @@ textarea {
 
     .nameemail {
         display: block;
-    
+
     }
 
     .email {
         margin-left: 0%;
     }
 
+    input{
+        width:300px;
+    }
+
+    
+    textarea {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .button {
+        margin-left:10%;
+        margin-bottom: 10px;
+        
+    
+    }
+
     .footerend {
         justify-content: flex-end;
     }
-    
+
     .socials {
         justify-content: flex-end;
     }
+
     .copyright {
         text-align: end;
+        margin-top: 25px;
     }
 }
