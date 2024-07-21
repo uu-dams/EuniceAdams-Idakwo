@@ -99,7 +99,15 @@ h1 span {
     font-family: "Eczar", serif;
     background-color:  rgb(185, 23, 91);
 }
-
+#send{
+    background-color: rgb(185, 23, 91);
+    border-radius: 15px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    padding-top: 2px;
+}
 main {
     display: flex;
 }
