@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My portfolio</title>
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="project.css" /> 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,93 +23,119 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css"
     />
-
-    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shalimar&display=swap" rel="stylesheet">
+<script src="index.js"></script>
   </head>
 
   <body>
-    <section class="homepage">
       <nav>
-        <div class="on">
-          <p>NicyDesign</p>
-        </div>
-        <ul class="navitems">
-          <img src="images/burger-menu-svgrepo-com.svg" />
-          <li><a href="#"> Home </a></li>
-          <li><a href="#about"> About </a></li>
-          <li><a href="#contact"> Contact </a></li>
+        <a href="#" class="nav-logo">Eunice VA</a>
+        <ul class="nav-links">
+            <li><a href="#"> Home </a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+
 
       <main>
-        <div class="btn">
-          <div class="tn">
-            <h1>ICT <span> Engineer </span></h1>
-            <button class="button1">
-              Hire Me
-              <i
-                class="fi fi-rs-following"
-                style="background-color: #f2d152"
-              ></i>
-            </button>
-            <a href="cv/My CV.docx" download="cv"><button class="button2" onclick="change()">
-                <p id="send">Download CV <i class="fi fi-br-download" style="background-color:rgb(185, 23, 91);"></i></p></button></a>
+        <div class="homepage">
+          <div class="text-container">
+              <h1>Hi, <span>I'm Eunice</span></h1>
+              <h2>Your Virtual Assistant</h2>
+              <p>Helping you stay organized, productive, and stress-free.</p>
+      
+              <div class="cta-buttons">
+                  <a href="#services"><button class="btn-primary">Explore Services</button></a>
+                  <a href="#contact"><button class="btn-secondary">Let's Connect</button></a>
+              </div>
           </div>
-          <div class="off">
-            <img src="images/10780017_19197944.svg" alt="engineer" />
+      
+          <div class="image-container">
+              <img src="images/microsoft-365-kTFmwxkF5bQ-unsplash.jpg" alt="Virtual Assistant">
           </div>
+      </div>
+      
+      </div>
+      
         </div>
       </main>
     </section>
 
-    <section id="about">
-      <div class="abtmain">
-        <div class="abtext">
-          <h1>About <span> Me </span></h1>
-          <article>
-            Hi! I'm Eunice Adams-Idakwo, a passionate student pursuing ICT
-            Engineering with a keen interest in web development. Currently
-            immersed in the dynamic world of technology,I find myself constantly
-            exploring new frameworks, languages, and design principles to create
-            engaging and efficient web experiences. My journey into ICT
-            Engineering began with a curiosity about how technology shapes our
-            daily lives and a desire to be part of its evolution. As I delve
-            deeper into my studies, I am honing my skills in areas such as
-            software development, networking, and systems administration, all
-            while specializing in web development as my niche. Let's connect and
-            explore how we can innovate together in the world of ICT and web
-            development!
-          </article>
-        </div>
-
-        <div class="illustration">
-          <img
-            src="images/self-concept-abstract-concept-vector-illustration-positive-self-perception-self-concept-type-personal-image-individual-psychology-person-definition-beliefs-about-yourself-abstract-metaphor.png"
-            alt="aboutme-img"
-            class="aboutme"
-          />
-        </div>
+    <section id="service">
+      <div class="mainclass">
+        <div class="tasks2">
+          <div class="task-box">
+              <img src="images/matt-ragland-8OVDzMGB_kw-unsplash.jpg" alt="Work Efficiency">
+              <h3>I can make your work lighter so you can focus on what truly matters.</h3>
+          </div>
+      
+          <div class="task-box">
+              <img src="images/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg" alt="Admin Work">
+              <h3>Overwhelmed with admin work? I handle the details so you don’t have to.</h3>
+          </div>
+      
+          <div class="task-box">
+              <img src="images/lukas-blazek-mcSDtbWXUZU-unsplash.jpg" alt="To-Do List">
+              <h3>Imagine having an extra set of hands to tackle your to-do list. That’s where I come in!</h3>
+          </div>
+      
+          <div class="task-box">
+              <img src="images/krakenimages-376KN_ISplE-unsplash.jpg" alt="Limited Availability">
+              <h3>I have limited availability this month. Let’s discuss how I can make your work easier!</h3>
+          </div>
       </div>
-    </section>
+</div>
 
+      
+      </div>      
+          <div class="class">
+            <section class="section">
+              <h2>How Can I Assist <span> You? </span></h2>
+              <p>Need an extra hand to keep things running smoothly? I can help you:</p>
+              <ul>
+                  <li>Manage your inbox efficiently</li>
+                  <li>Design stunning slides and presentations</li>
+                  <li>Track and organize your expenses</li>
+                  <li>Oversee and streamline your projects</li>
+                  <li>Book tickets and craft seamless travel itineraries</li>
+                  <li>Prepare clear and structured meeting agendas</li>
+                  <li>Transcribe audio and documents with precision</li>
+                  <li>Record and track meeting minutes</li>
+                  <li>Conduct thorough research for your needs</li>
+                  <li>Plan and create efficient schedules</li>
+                  <li>Update and maintain your website</li>
+                  <li>And much more!</li>
+              </ul>
+              <p>Let’s make your workflow effortless!</p>
+                <a href="cv/Eunice Adams-Idakwo Resume.pdf" download="Eunice_Resume"><button class="btn" onclick="change()">Download Resume <i class="fi fi-br-download" style="background-color: #f0c01d" ></i></button></a>
+           </section>
+           </div>
+        </div>
+    </section>
     <section class="contact" id="contact">
       <div>
         <h1>
-          Got a Project
-          <span> in mind? </span>
+          Let's make <span> your </span> work lighter - Reach out Today! 
         </h1>
-        <img
-          src="images/12083363_Wavy_Bus-19_Single-03.svg"
-          class="contactimg"
-        />
-      </div>
+      
       <div class="contactcontent">
         <div class="rightside">
-          <form
-            action="https://public.herotofu.com/v1/d0328810-42ae-11ef-91e4-b1221c7356b8"
-            method="post"
-            accept-charset="UTF-8"
-          >
+          <form action="https://formsubmit.co/adeunice6@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
             <div class="nameemail">
               <div class="name">
                 <label for="name"> Your Name </label> <br />
@@ -138,6 +164,7 @@
               ><br /><br />
             </div>
 
+            
             <button class="button" type="submit">
               Send Message
               <i
@@ -151,50 +178,21 @@
     </section>
 
     <footer>
-      <div class="footerend">
-        <a href="#"
-          ><p><i class="fi fi-br-house-chimney"></i> Home &nbsp; &nbsp;</p></a
-        >
-        <a href="#about"
-          ><p><i class="fi fi-br-circle-user"></i> About me &nbsp; &nbsp;</p></a
-        >
-        <a href="#contact"
-          ><p><i class="fi fi-br-phone-flip"></i> Contact</p></a
-        >
-      </div>
-
       <div class="socials">
-        <a href="images/u_udams_qr.png">
-        <i
-          class="fi fi-brands-instagram"
-          style="background-color: #e194c07c"
-        ></i></a>
-        &nbsp; &nbsp;
         
-        <a href="#contact">
-        <i
-          class="fi fi-brands-whatsapp"
-          style="background-color: #e194c07c"
-        ></i></a>
-        &nbsp; &nbsp;
-
-        <a href="images/snapcode.png">
-          <i
-          class="fi fi-brands-snapchat"
-          style="background-color: #e194c07c"
-        ></i></a>
-        &nbsp; &nbsp; 
-         
-
-        <a href="https://www.linkedin.com/in/eunice-adams-idakwo-96a835228/">
-        <i
-          class="fi fi-brands-linkedin"
-          style="background-color: #e194c07c"
-        ></i></a>
-        
-      </div>
+        <p> Linkedlin:<a href="https://www.linkedin.com/in/eunice-adams-idakwo/">Eunice Adams-Idakwo
+        </a> </p> &nbsp;
+        &nbsp;
+        <p>Email:<a href="mailto:adeunice6@gmail.com"
+          >
+            adeunice6@gmail.com
+          </a>
+        </p>
+      </div> &nbsp;
+             &nbsp;
+             &nbsp;
       <div class="copyright">
-        <p>Copyright &copy; 2024 Eunice Adams-Idakwo</p>
+        <p>Copyright &copy; 2024 Eunice Ojochide Adams-Idakwo</p>
       </div>
     </footer>
   </body>

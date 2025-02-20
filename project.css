@@ -11,208 +11,402 @@ html {
 .homepage {
     height: 100vh;
 }
-
+/* Navigation Bar */
 nav {
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    border-bottom: 1px solid #f0c01d;
-    top: 0;
-
-}
-
-.on {
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: right;
-    float: right;
-    color: black;
-    padding: 0%;
-    margin: 0%;
-    margin-top: -3%;
-    margin-left: 70%;
-    font-family: "Eczar", serif;
-}
-
-.navitems li a {
-    color: black;
-    text-decoration: none;
-    margin-right: 85px;
-    transition: all ease 0.2s;
-    font-size: 1rem;
-    
-}
-
-.navitems li a:hover {
-    font-size: 1.3rem;
-    color: #E194C0;
-
-}
-
-.navitems img {
-    display: none;
-    width: 40px;
-}
-
-h1 {
-    font-size: 80px;
-    line-height: 96px;
-    font-weight: 700;
-    font-family: "Eczar", serif;
-    color: #e194c0f1;
-}
-
-h1 span {
-    color: #f2d252ec;
-}
-
-.btn {
-    display: flex;
-    margin-top: 100px;
-    margin-right: 100px;
-    margin-left: 7%;
-}
-
-.button1 {
-    background-color: #F2D152;
-    color: black;
-    width: 100px;
-    height: 30px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    font-family: "Eczar", serif;
-}
-
-.button2 {
-    color: black;
-    border-radius: 15px;
-    width: 150px;
-    border: none;
-    cursor: pointer;
-    font-family: "Eczar", serif;
-    background-color:  rgb(185, 23, 91);
-}
-#send{
-    background-color: rgb(185, 23, 91);
-    border-radius: 15px;
-    width: 150px;
-    border: none;
-    cursor: pointer;
-    height: 30px;
-    padding-top: 2px;
-}
-main {
-    display: flex;
-}
-
-.btn img {
-    width: 350px;
-    margin-left: 150px;
-}
-
-
-.aboutme {
-    width: 350px;
-    margin-top: 50px;
-}
-
-.abtext {
-    font-family: "Eczar", serif;
-    margin-left: 7%;
-    margin-top: 50px;
-}
-
-.abtext h1 {
-    color: #f0c01d;
-    font-size: 55px;
-}
-
-.abtext h1 span {
-    color: #E194C0;
-    font-size: 55px;
-}
-
-.abtext article {
-    font-size: 15px;
-    display: block;
-}
-
-.abtmain {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
+/* Logo */
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #032243;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #032243;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #E194C0;
+    font-size: 1.2rem;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 
-.contact {
+/* Main Homepage Styling */
+.homepage {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background: #f9f9f9;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Left Text Section */
+.text-container {
+    max-width: 50%;
+    font-family: "Montserrat", serif;
+  }
+
+.text-container h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.text-container h1 span {
+    color: #032243;
+}
+
+.text-container h2 {
+    font-size: 26px;
+    color: black;
+    margin-top: 10px;
+}
+
+.text-container p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: black;
+    line-height: 1.5;
+}
+
+/* Slide-in Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Buttons */
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-resume {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: #E194C0;
+    color: white;
+    border: 2px solid #032243;
+}
+
+.btn-primary:hover {
+    background: #c76c9f;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: transparent;
+    color: #E194C0;
+    border: 2px solid #032243;
+}
+
+.btn-secondary:hover {
+    background: #E194C0;
+    color: white;
+}
+
+/* Resume Download Button */
+.btn {
+    background-color: #f0c01d;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e0a813;
+} 
+
+/* Right Image Section */
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .homepage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Main Container */
+.tasks2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+/* Individual Task Boxes */
+.task-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Image Styling */
+.task-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.task-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tasks2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .task-box {
+        max-width: 90%;
+    }
+}
+
+
+
+.section {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
     font-family: "Eczar", serif;
-    margin-left: 5%;
-    margin-top: 10%;
+}
+.section h2 {
+    font-size: 26px;
+    color: #032243;
+    margin-bottom: 15px;
+}
+.section h2 span{
+    color: #f0c01d;
+}
+
+.section p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    font-size: 16px;
+    background: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+.contact {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto 0 auto; /* Centers it below the service section */
+    text-align: center;
+    font-family: "Eczar", serif;
 }
 
 .contact h1 {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 1.2;
     margin-top: 20%;
     font-family: "Eczar", serif;
-    color: #E194C0;
+    color: #032243;
 }
 
 .contact h1 span {
     color: #f0c01d;
 }
 
-.contactimg {
-    width: 300px;
-}
-
-
-.contactcontent {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 90px;
-    margin-top: 50px;
-}
-
 .nameemail {
-    display: flex;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    margin-top: 40px;
-
 }
 
-.email {
-    margin-left: 5%;
-}
-
-input {
-    width: 200px;
+input, textarea {
+    width: 90%;
+    max-width: 500px;
     height: 40px;
     border-radius: 16px;
-    border: 3px solid purple;
+    border: 3px solid #E194C0;
     background-color: white;
     padding-left: 12px;
-    opacity: 0.5;
+    opacity: 0.8;
     margin-top: 12px;
+    font-size: 16px;
 }
 
 textarea {
-    width: 500px;
-    height: 70px;
-    border-radius: 16px;
-    border: 3px solid purple;
-    background-color: white;
-    padding-left: 12px;
-    opacity: 0.5;
-    margin-top: 12px;
+    height: 80px;
     padding-top: 12px;
 }
 
@@ -222,37 +416,22 @@ textarea {
     border-radius: 20px;
     border: none;
     width: 150px;
-    height: 30px;
-    opacity: 1;
-    font-family: "Eczar", serif;
-
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-
-.footerend {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    margin-top: 4%;
-    font-family: "Eczar", serif;
-    border-top: 1px solid #f0c01d;
-    width: 110%;
-
-}
-
-.footerend a {
-    color: black;
-    text-decoration: none;
-    margin-right: 85px;
-    transition: all ease 0.2s;
-
-
-}
+.button:hover {
+    background-color: #e0a813;
+} 
 
 .socials {
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 2%; 
+    font-size: 20px;
 }
 
 .socials i {
@@ -269,110 +448,22 @@ textarea {
     text-decoration: none;
     transition: all ease 0.2s;
 }
-
- .socials a:hover {
-    font-size: 1.3rem;
-    text-decoration: none;
-
+.socials a {
+    text-decoration: none; /* Removes underline */
+    color: #0056b3; /* Ensures it takes the parent's text color */
 }
-
 
 .copyright {
-    text-align: end;
-    font-size: small;
+    text-align: center;
+    font-size: 15px;
 }
-
-@media only screen and (max-width: 480px) {
-    nav li a {
-        display: none;
-    }
-
-    .navitems img {
-        display: block;
-        height: 49px;
-        margin-right: 500%;
-        margin-top: 5px;
-        justify-content: flex-end;
-    }
-
-    .contactcontent {
-        display: block;
-    }
-
-    .abtext article {
-        display: inline;
-    }
-
-    .btn {
-        display: block;
-        margin-top: 100px;
-    }
-
-    .btn img {
-        width: 250px;
-        margin-top: 50px;
-        margin-left: 0px;
-    }
-
-    .aboutme {
-        display: none;
-    }
-
-    .abtext article {
-        font-size: 15px;
-        display: flex;
-    }
-
-    .contactimg {
-        display: none;
-    }
-
-    .contactcontent {
-        margin-left: 10px;
-        margin-top: 0px;
-    }
-
-    .contact {
-        display: grid;
-    }
-
-    .nameemail {
-        display: block;
-
-    }
-
-    .email {
-        margin-left: 0%;
-    }
-
-    input{
-        width:300px;
-    }
-
-    
-    textarea {
-        width: 300px;
-        height: 200px;
-    }
-    
-    .button {
-        margin-left:10%;
-        margin-bottom: 10px;
-        
-    
-    }
-
-    .footerend {
-        justify-content: flex-end;
-        width: 150%;
-    }
-
+/* Responsive Design */
+@media (max-width: 600px) {
     .socials {
-        justify-content: flex-end;
+        gap: 10px;
+        font-size: 12px;
     }
-
     .copyright {
-        text-align: end;
-        margin-top: 25px;
+        font-size: 12px;
     }
 }
