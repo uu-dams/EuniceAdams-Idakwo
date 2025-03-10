@@ -171,6 +171,193 @@
         </div>
       </div>
     </section>
+    <section> <!-- This is for my customer reviews -->
+      <div id="reviewForm"class="review-container">
+        <h2>Leave a Review</h2>
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+        <textarea id="feedback" placeholder="Your Feedback" required></textarea><br><br>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5" selected>⭐⭐⭐⭐⭐</option>
+        </select> 
+        <input type="hidden" id="ratingValue" value="5">
+        <button id="submitBtn"onclick="submitReview()" class="button">Submit</button>
+
+        <!--<script>
+          document.addEventListener("DOMContentLoaded", function () {
+            let submitButton = document.getElementById("submitBtn");
+        
+            if (!submitButton) {
+              console.error("Submit button not found!");
+              return;
+            }
+        
+            submitButton.addEventListener("click", function (e) {
+              e.preventDefault();
+              console.log("Submit button clicked!"); // Debugging
+        
+              let nameInput = document.getElementById("name");
+              let feedbackInput = document.getElementById("feedback");
+              let ratingInput = document.getElementById("rating");
+              let reviewContainer = document.getElementById("reviews");
+        
+              if (!nameInput || !feedbackInput || !ratingInput || !reviewContainer) {
+                console.error("One or more input fields are missing!");
+                return;
+              }
+        
+              let name = nameInput.value.trim();
+              let feedback = feedbackInput.value.trim();
+              let rating = parseInt(ratingInput.value);
+        
+              if (!name || !feedback || isNaN(rating) || rating < 1 || rating > 5) {
+                alert("Please fill in all fields correctly.");
+                return;
+              }
+        
+              let reviewDiv = document.createElement("div");
+              reviewDiv.classList.add("review");
+              reviewDiv.innerHTML = `
+                <strong>${name}</strong> <br> 
+                <span class='stars'>${'⭐'.repeat(rating)}</span> <br> 
+                ${feedback}
+              `;
+        
+              reviewContainer.prepend(reviewDiv);
+              document.getElementById("reviewForm").reset(); // Reset form
+        
+              console.log("Review submitted successfully!");
+            });
+          });
+          function submitReview() {
+  console.log("submitReview function called!");
+}
+
+        </script> -->
+        <script>
+        async function submitReview() {
+          console.log("submitReview function called!");
+      
+          // Get form values
+          const name = document.getElementById("name").value.trim();
+          const feedbackInput = document.getElementById("feedback").value.trim();
+          const rating = document.getElementById("rating").value; // Rating is usually a number, so no .trim()
+      
+          // Debugging: Print values to console
+          console.log("Name:", name);
+          console.log("feedback:", feedbackInput);
+          console.log("Rating:", rating);
+      
+          // Check if any field is empty
+          if (!name || !feedbackInput || !rating) {
+              console.error("All fields are required!");
+              alert("Please fill in all fields correctly.");
+              return;
+          }
+      
+          try {
+              const docRef = await addDoc(collection(db, "reviews"), {
+                  name: name,
+                  feedback: feedbackInput,
+                  rating: parseInt(rating), // Convert rating to number
+                  timestamp: new Date()
+              });
+      
+              console.log("Review submitted with ID: ", docRef.id);
+              alert("Review submitted successfully!");
+          } catch (error) {
+              console.error("Error adding document: ", error);
+              alert("Error submitting review!");
+          }
+      }
+      </script>
+        <div id="reviews"></div>
+
+        
+        
+
+<script type="module">
+  // Import Firebase SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+  // Your Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC8UROodeILLPNZvJdyUEB0n5IRFpDh1xc",
+    authDomain: "myportfolio-497b5.firebaseapp.com",
+    projectId: "myportfolio-497b5",
+    storageBucket: "myportfolio-497b5.appspot.com",  // FIXED: storageBucket URL
+    messagingSenderId: "196481472189",
+    appId: "1:196481472189:web:778a1bdb42d76ba6c4c9d4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app); // Initialize Firestore database
+
+  // Reference to Firestore collection
+const reviewsRef = collection(db, "reviews");
+
+// Handle form submission
+document.getElementById("reviewForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Get form values
+  const name = document.getElementById("name").value;
+  const rating = document.getElementById("rating").value;
+  const feedback = document.getElementById("feedback").value;
+
+  if (name && rating && feedback) {
+    try {
+      // Save review to Firestore
+      await addDoc(reviewsRef, {
+        name: name,
+        rating: parseInt(rating),
+        feedback: feedback,
+        timestamp: new Date()
+      });
+
+      alert("Review submitted successfully!");
+      document.getElementById("reviewForm").reset();
+      loadReviews(); // Refresh the review list
+    } catch (error) {
+      console.error("Error adding review:", error);
+      alert("Failed to submit review. Try again.");
+    }
+  }
+});
+
+// Function to load reviews from Firestore
+async function loadReviews() {
+  const querySnapshot = await getDocs(reviewsRef);
+  const reviewsContainer = document.getElementById("reviewsContainer");
+  //reviewsContainer.innerHTML = ""; // Clear old reviews
+
+  querySnapshot.forEach((doc) => {
+    const review = doc.data();
+    reviewsContainer.innerHTML += `
+      <div class="review">
+        <h4>${review.name} ⭐${review.rating}</h4>
+        <p>${review.feedback}</p>
+        <small>${new Date(review.timestamp.toDate()).toLocaleString()}</small>
+      </div>
+      <hr>
+    `;
+  });
+}
+
+// Load reviews when the page loads
+loadReviews();
+
+  console.log("Firebase connected successfully!");
+</script>
+
+    </div>
+    </section>
 
     <footer>
       <div class="socials">
