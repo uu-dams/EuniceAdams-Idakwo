@@ -204,7 +204,7 @@ nav {
 
 /* Resume Download Button */
 .btn {
-    background-color: #f0c01d;
+    background-color: #E194C0;
     color: black;
     border: none;
     padding: 12px 24px;
@@ -216,7 +216,7 @@ nav {
 }
 
 .btn:hover {
-    background-color: #e0a813;
+    background-color: #E194C0;
 } 
 
 /* Right Image Section */
@@ -321,7 +321,7 @@ nav {
     margin-bottom: 15px;
 }
 .section h2 span{
-    color: #f0c01d;
+    color: #E194C0;
 }
 
 .section p {
@@ -377,7 +377,7 @@ nav {
 }
 
 .contact h1 span {
-    color: #f0c01d;
+    color: #E194C0;
 }
 
 .nameemail {
@@ -393,7 +393,7 @@ input, textarea {
     max-width: 500px;
     height: 40px;
     border-radius: 16px;
-    border: 3px solid #E194C0;
+    border: 3px solid #032243;
     background-color: white;
     padding-left: 12px;
     opacity: 0.8;
@@ -407,7 +407,7 @@ textarea {
 }
 
 .button {
-    background-color: #f0c01d;
+    background-color: #E194C0;
     color: black;
     border-radius: 20px;
     border: none;
