@@ -226,6 +226,8 @@ nav {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 10;
 }
 
 /* Responsive Design */
@@ -240,7 +242,13 @@ nav {
     }
 
     .image-container {
-       display: none;
+        width: 100%; /* Makes the image scale with the container */
+        /*max-width: 600px; /* Optional: Adjust max size */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes extra space below the image */
+        margin: 0 auto; /* Centers the image */
+        position: relative;
+        z-index: 5;
     }
 
     .cta-buttons {
@@ -282,6 +290,7 @@ nav {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+   
 }
 
 /* Hover Effect */
@@ -296,6 +305,7 @@ nav {
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        position: relative;
     }
 
     .task-box {
@@ -462,8 +472,11 @@ textarea {
 
 
 .socials a {
-    text-decoration: none; /* Removes underline */
-    color: #032243; /* Ensures it takes the parent's text color */
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Eczar", serif;
+    font-size: 15px;
 }
 
 .copyright {
