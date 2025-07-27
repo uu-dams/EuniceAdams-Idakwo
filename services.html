@@ -46,12 +46,13 @@
         ul {
             list-style-type: none;
             padding: 0;
+            
         }
         ul li {
-            background: #e0e0e0;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
+           background: #e3f0fa;  /* or #fffbe6 */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
         }
         .gallery {
             display: flex;
@@ -64,26 +65,8 @@
             height: auto;
             border-radius: 5px;
             transition: transform 0.3s ease-in-out;
-}
-.picture img{
-    width: 100px;
-            height: auto;
-            border-radius: 5px;
-            display: flex;
-            
-}
-.bio{
-      width: 100px;
-      height: auto;
-             flex-direction: row;
-           
-}
-.biotext{
-    height: auto;
-            float: left;
-}
-
-.gallery img:hover {
+        }
+        .gallery img:hover {
     transform: scale(1.1);
 }
         footer {
@@ -97,31 +80,82 @@
             text-decoration: none;
             font-weight: bold;
         }
-    
+.biocontainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 20px auto;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+ background-color: #f9f9f9;
+  background: white;
+}
+
+.profile-photo {
+  width: 150px;       /* smaller baseline size */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;     /* prevents shrinking below defined width */
+}
+
+#bio {
+  flex: 1 1 300px;    /* lets bio text grow but not shrink too small */
+  min-width: 200px; 
+}
+
+.biotext p {
+  margin-top: 0;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 600px) {
+  .biocontainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+  #bio {
+    flex: none;
+    min-width: auto;
+  }
+  iframe {
+  max-width: 100%;
+  height: auto;
+}
+}
     </style>
 </head>
 <body>
     <header>
         <h1>Explore My Services</h1>
     </header>
-    <section id="who-is-eunice">
-        <h2><i class="fi fi-rs-user"></i> Who is Eunice?</h2>
-        <div class="biotext"></div>
-        <p>Hi, I’m Eunice Adams-Idakwo, your friendly neighborhood ICT Engineering grad with a love for technology, tourism, 
-        and making sense out of chaos (color-coded spreadsheets are my guilty pleasure). My superpowers include web development,
-         data analytics, and virtual assistance, with a dash of administrative wizardry for good measure.<br>
-         If something needs organizing, I’m probably building a checklist for it and yes, my sock drawer is sorted alphabetically.<br>
-         My leadership journey spans roles as Assistant Class Rep and student org VP, where I discovered that nothing says “teamwork” 
-         like running meetings with precisely timed agendas and the world’s neatest notes.<br>
-         I’m currently leveling up project management skills with ALX, on a mission to create smart, tech-driven solutions that make
-        work easier and more fun. If you’re into tech, great organization, or just want to swap stories about the joys of tidy digital files,
-         let’s connect and make something amazing happen!
-        </p>
-        </div>
-        <div class="bio">
-            <img src="images/Adobe Express - file.png" alt="professional photo" style="width:300px" >
-        </div>
-    </section>
+     <!-- structure for bio container -->
+<div class="biocontainer">
+  <img src="images/Adobe Express - file.png" alt="professional photo" class="profile-photo"/>
+  <section id="bio">
+    <h2><i class="fi fi-rs-user"></i> Bio </h2>
+    <div class="biotext">
+      <p>Hi, I’m Eunice Adams-Idakwo, your friendly neighborhood ICT Engineering grad with a love for technology, tourism, 
+      and making sense out of chaos (color-coded spreadsheets are my guilty pleasure). My superpowers include web development,
+       data analytics, and virtual assistance, with a dash of administrative wizardry for good measure.<br>
+       If something needs organizing, I’m probably building a checklist for it and yes, my sock drawer is sorted alphabetically.<br>
+       My leadership journey spans roles as Assistant Class Rep and student org VP, where I discovered that nothing says “teamwork” 
+       like running meetings with precisely timed agendas and the world’s neatest notes.<br>
+       I’m currently leveling up project management skills with ALX, on a mission to create smart, tech-driven solutions that make
+       work easier and more fun. If you’re into tech, great organization, or just want to swap stories about the joys of tidy digital files,
+       let’s connect and make something amazing happen!
+      </p>
+    </div>
+  </section>
+</div>
+
     <section id="background">
         <h2><i class="fi fi-rs-troph-cap"></i> My Background</h2>
         <h3>Education</h3>
@@ -172,7 +206,7 @@
         <h2><i class="fi fi-brands-linkedin"></i> Connect with Me on LinkedIn</h2>
         <a href="https://www.linkedin.com/in/eunice-adams-idakwo" target="_blank"> Visit My LinkedIn Profile</a>
     </section>
-    <section id="portfolio">
+    <section>
         <h2><i class="fi fi-rs-briefcase"></i> My Work</h2>
         <div class="gallery">
             <img src="images/Eunice's Google Inbox.png" alt="Project Screenshot">
@@ -183,14 +217,14 @@
             <img src="images/Screenshot (86).png" >
 
         </div>
-        <section id="portfolio">
+        <section>
             <h2><i class="fi fi-rs-troph-cap"></i> Certifications </h2>
             <div class="gallery">
                 <img src="images/72-virtual-assistant-certificate-eunice-adams-idakwo.png" alt="ALX Certification" style="width:300px" >
                 <img src="images/WhatsApp Image 2025-07-27 at 2.04.19 AM.jpeg " alt="neocloud certification" style="width:200px"|>
             </div>
-            <h2><i class="fi fi-br-screen-play"></i> Elevator Pitch </h2>
-            <iframe width="315" height="560" src="https://www.youtube.com/embed/kWoxHOwGQO4" title="Personal Elevator Pitch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="pitch"><i class="fi fi-br-screen-play"></i> Elevator Pitch </h2>
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/kWoxHOwGQO4" title="Personal Elevator Pitch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
     <section id="contact">
         <h2><i class="fi fi-rs-form"></i> Let's Work Together!</h2>
