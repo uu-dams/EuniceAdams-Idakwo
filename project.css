@@ -1,7 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
-    background-color: white;
+    background-color: beige;
 }
 
 html {
@@ -16,7 +16,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f9f9f9;
+    background: beige;
     padding: 15px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -53,7 +53,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #E194C0;
+    color: #800000;
     font-size: 1.2rem;
 }
 
@@ -72,7 +72,7 @@ nav {
         position: absolute;
         top: 60px;
         right: 0;
-        background: white;
+        background: beige;
         width: 200px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
@@ -100,7 +100,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 50px 10%;
-    background: #f9f9f9;
+    background: beige;
     min-height: 100vh;
     animation: fadeIn 1.5s ease-in-out;
 
@@ -181,31 +181,31 @@ nav {
 
 /* Primary Button */
 .btn-primary {
-    background: #E194C0;
+    background: #800000;
     color: white;
     border: 2px solid #032243;
 }
 
 .btn-primary:hover {
-    background: #c76c9f;
+    background: #ddd;
 }
 
 /* Secondary Button */
 .btn-secondary {
     background: transparent;
-    color: #E194C0;
+    color: #800000;
     border: 2px solid #032243;
 }
 
 .btn-secondary:hover {
-    background: #E194C0;
+    background: #ddd;
     color: white;
 }
 
 /* Resume Download Button */
 .btn {
-    background-color: #E194C0;
-    color: black;
+    background-color: #800000;
+    color: white;
     border: none;
     padding: 12px 24px;
     border-radius: 25px;
@@ -216,7 +216,7 @@ nav {
 }
 
 .btn:hover {
-    background-color: #E194C0;
+    background-color: #800000;
 } 
 
 /* Right Image Section */
@@ -273,7 +273,7 @@ nav {
 
 /* Individual Task Boxes */
 .task-box {
-    background: white;
+    background: beige;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -316,7 +316,7 @@ nav {
 
 
 .section {
-    background: #f9f9f9;
+    background: beige;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -331,7 +331,7 @@ nav {
     margin-bottom: 15px;
 }
 .section h2 span{
-    color: #E194C0;
+    color: #800000;
 }
 
 .section p {
@@ -347,7 +347,7 @@ nav {
 
 .section ul li {
     font-size: 16px;
-    background: #fff;
+    background: beige;
     padding: 12px;
     margin: 8px 0;
     border-radius: 8px;
@@ -368,7 +368,7 @@ nav {
 }
 
 .contact {
-    background: #f9f9f9;
+    background: beige;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -387,7 +387,7 @@ nav {
 }
 
 .contact h1 span {
-    color: #E194C0;
+    color: #800000;
 }
 
 .nameemail {
@@ -404,7 +404,7 @@ input, textarea {
     height: 40px;
     border-radius: 16px;
     border: 3px solid #032243;
-    background-color: white;
+    background-color: beige;
     padding-left: 12px;
     opacity: 0.8;
     margin-top: 12px;
@@ -417,8 +417,8 @@ textarea {
 }
 
 .button {
-    background-color: #E194C0;
-    color: black;
+    background-color: #800000;
+    color: white;
     border-radius: 20px;
     border: none;
     width: 150px;
@@ -430,7 +430,7 @@ textarea {
 }
 
 .button:hover {
-    background-color: #e0a813;
+    background-color: #ddd;
 } 
 
 .socials {
@@ -455,7 +455,7 @@ textarea {
     transition: all ease 0.2s;
 }
 
-.review-container { background: #f9f9f9;
+.review-container { background: beige;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -478,7 +478,9 @@ textarea {
     font-family: "Eczar", serif;
     font-size: 15px;
 }
-
+.socials a:hover{
+            color: black;
+            }
 .copyright {
     text-align: center;
     font-size: 15px;

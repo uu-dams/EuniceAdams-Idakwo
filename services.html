@@ -19,13 +19,13 @@
             
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: beige;
             color: #333;
             font-family: "Eczar", serif;
         
         }
         header {
-            background: #f9f9f9;
+            background: beige;
             padding: 10px 0px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -34,7 +34,7 @@
         section {
             max-width: 800px;
             margin: 20px auto;
-            background: white;
+            background: beige;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@
             
         }
         ul li {
-           background: #e3f0fa;  /* or #fffbe6 */
+           background: #fffbe6;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
@@ -76,9 +76,17 @@
             color: white;
         }
         a {
-            color: #0073e6;
+            color: #800000;
             text-decoration: none;
             font-weight: bold;
+        }
+        a:hover{
+            color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+        }
+        #contact h1{
+            font-size: 15px;
         }
 .biocontainer {
   display: flex;
@@ -87,23 +95,23 @@
   max-width: 800px;
   margin: 20px auto;
   flex-wrap: wrap; /* allows wrapping on small screens */
- background-color: #f9f9f9;
-  background: white;
+ background-color: beige;
+  background: beige;
 }
 
-.profile-photo {
-  width: 150px;       /* smaller baseline size */
+/* .profile-photo {
+  width: 150px;        /*smaller baseline size 
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  flex-shrink: 0;     /* prevents shrinking below defined width */
-}
+  flex-shrink: 0;      /*prevents shrinking below defined width
+}  */
 
 #bio {
-  flex: 1 1 300px;    /* lets bio text grow but not shrink too small */
+  flex: 1 1 300px;    /*lets bio text grow but not shrink too small  */
   min-width: 200px; 
-}
+} 
 
 .biotext p {
   margin-top: 0;
@@ -138,8 +146,7 @@
     </header>
      <!-- structure for bio container -->
 <div class="biocontainer">
-  <!-- <img src="images/Adobe Express - file.png" alt="professional photo" class="profile-photo"/> -->
-  <section id="bio">
+  <!-- <img src="images/gradphoto2.jpeg" alt="professional photo" class="profile-photo"/>  -->
     <h2><i class="fi fi-rs-user"></i> Bio </h2>
     <div class="biotext">
       <p>Hi, I’m Eunice Adams-Idakwo, your friendly neighborhood ICT Engineering grad with a love for technology, tourism, 
@@ -158,10 +165,11 @@
     <section id="background">
         <h2><i class="fi fi-rs-troph-cap"></i> My Background</h2>
         <h3>Education</h3>
-        <p>B.Eng in Information and Communication Technology </p>
+        <p>B.Eng in Information and Communication Technology (GMNSE, PCOREN)</p>
         <h3>Work Experience</h3>
         <ul>
-            <li>Virtual Assistant - Freelance </li>
+            <li>Visual Design and Branding </li>
+            <li>Virtual Assistant </li>
             <li>Data Analyst </li>
             <li>Intern - Neo Cloud Technologies (Web Development) </li>
             <li>Intern - Nigerian Communications Commission (Networking Basics) </li>
@@ -170,14 +178,12 @@
     </section>
     <section id="services">
         <h2><i class="fi fi-rs-user-headset"></i> Services I Offer</h2>
-        <h3>Virtual Assistance</h3>
         <ul>
             <li>Email & Calendar Management</li>
             <li>Social Media Scheduling</li>
             <li>Data Entry & Organization</li>
             <li>Research & Documentation</li>
         </ul>
-        <h3>Data Analytics</h3>
         <ul>
             <li>Data Collection and Sourcing</li>
             <li>Data Cleaning and Preparation</li>
@@ -186,22 +192,14 @@
             <li>Building and Managing Databases</li>
             <li>Process Optimization and Efficiency Improvements</li>
         </ul>
-        <h3>Web Development</h3>
-        <ul>
-            <li>Landing Page Design</li>
-            <li>Website Maintenance</li>
-            <li>Implementing Firebase for Database Storage</li>
+          <ul>
+            <li>Social Media Asset Creation</li>
+            <li>Brand Identity & Color Psychology</li>
+            <li>Print & Digital Layout Design(for stationery/letters)</li>
         </ul>
+       
     </section>
-    <section id="tools">
-        <h2><i class="fi fi-rs-customize"></i> Tools I Use</h2>
-        <h3>Virtual Assistance</h3>
-        <p>Trello, Asana, Google Workspace, Notion, Slack, Calendly</p>
-        <h3> Data Analytics </h3>
-        <p> Microsoft Excel, Power BI</p>
-        <h3>Web Development</h3>
-        <p>HTML, CSS, JavaScript, Firebase</p>
-    </section>
+   
     <section id="linkedin-traffic">
         <h2><i class="fi fi-brands-linkedin"></i> Connect with Me on LinkedIn</h2>
         <a href="https://www.linkedin.com/in/eunice-adams-idakwo" target="_blank"> Visit My LinkedIn Profile</a>
@@ -229,11 +227,11 @@
     </section>
     <section id="contact">
         <h2><i class="fi fi-rs-form"></i> Let's Work Together!</h2>
-        <p>Need a reliable Virtual Assistant, Data Analyst or Web Developer? Let’s collaborate!</p>
         <h1><a href="index.html#contact">Contact Me</a></h1>
+        <h1><a href="https://www.instagram.com/nicys.ng?igsh=MXdhOGN0dWx4ZjZwdw%3D%3D&utm_source=qr">Check out nicys.ng</a></h1>
     </section>
     <footer>
-        <p>&copy; 2025 Eunice Adams-Idakwo. All rights reserved.</p>
+        <p>&copy; 2026 Eunice Adams-Idakwo. All rights reserved.</p>
     </footer>
 </body>
 </html>
